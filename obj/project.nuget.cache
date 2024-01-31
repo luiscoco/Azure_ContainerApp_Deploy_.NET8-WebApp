@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "TvA4QckeovzUJz66C1zjjfUZBNLLfXujHKsEA26bebEPeUrAV5PzwkTPFirM/bhEV5rQPY9btldV7MMJXaRHMA==",
+  "success": true,
+  "projectFilePath": "C:\\New folder\\Azure_ContainerApp_Deploy_.NET8-WebApp\\AzureContainerAppWebApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\luisc\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\microsoft.visualstudio.azure.containers.tools.targets.1.19.5.nupkg.sha512"
+  ],
+  "logs": []
+}
