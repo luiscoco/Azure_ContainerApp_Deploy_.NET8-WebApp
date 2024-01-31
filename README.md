@@ -322,6 +322,11 @@ A new publishing profile has been created
 
 ![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/1752c2c5-d544-46e8-89f5-eeabf9559886)
 
+We press the **Publish** button
+
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/ebc8310a-c1ec-4905-b0e9-c0856c1f0973)
+
+
 ## 3. Create Azure Container App
 
 We have first to lo in to Azure CLI
