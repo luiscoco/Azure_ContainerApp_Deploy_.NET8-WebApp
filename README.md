@@ -346,7 +346,7 @@ docker run -e ASPNETCORE_ENVIRONMENT=Development -p 5191:8080 --name myapp -d lu
 
 We see the image and running container in Docker Desktop
 
-![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/2747988a-2048-4481-87d6-6798373a5f5d)
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/c606e385-cf30-4352-a3bb-2e2000dde119)
 
 ![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/f478fc82-3058-4a58-b5b1-f07ceac16198)
 
