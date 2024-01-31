@@ -34,8 +34,8 @@ We add the Docker support to the project and automaticallly the Dockerfile will 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
+EXPOSE 80
+EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
@@ -131,19 +131,69 @@ We copy the **bin.png** icon file to the **wwwroot/icons** folder
 
 ![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/eb997f1e-3b97-4a47-b9b6-cf8c3f6b5210)
 
-
 ### 1.4. Modify the HomeController.cs 
 
+```csharp
+using AzureContainerAppWebApp.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
+namespace AzureContainerAppWebApp.Controllers
+{
+    public class HomeController : Controller
+    {
+        private readonly ILogger<HomeController> _logger;
 
+        public class Todo
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+            public bool Done { get; set; }
+        }
 
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
 
-### 1.5 Modify the ports in Dockerfile and launchSetting.json 
+        public IActionResult Index()
+        {
+            ViewBag.Todos = new List<Todo>()
 
+            {
+                new Todo 
+                { 
+                    Id = 1,
+                    Name = "Test1",
+                },
+                new Todo
+                {
+                    Id = 1,
+                    Name = "Test2",
+                }
+            };
+            return View();
+        }
 
+        public IActionResult Privacy()
+        {
+            return View();
+        }
 
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+}
+```
 
+### 1.5 Modify the ports in Dockerfile and launchSettings.json 
 
+We set in the launchSettings.json the ports 80 and 443
+
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/862ea9f0-6075-4ecd-b9d2-6e2b97f97c61)
 
 ### 1.6. Build and Run the WebApp
 
