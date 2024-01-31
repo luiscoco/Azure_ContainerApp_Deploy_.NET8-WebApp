@@ -298,15 +298,29 @@ We verify the docker image is stored in Docker Hub repo
 
 ### 2.2. Publish the WebApp to Docker Hub (with Visual Studio)
 
+We right click on the project name and select the **Publish** option
 
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/5fa86329-7a2c-4eb0-ba05-6f6021035aad)
 
+We select the publish option **ContainerRegistry for Docker**
 
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/9afa773e-640e-4445-a637-4e48c0cb5e5b)
 
+We select the publish option **Docker Hub**
 
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/7ba7b210-438e-432e-aa28-bc4573198b4d)
 
+We input our **Docker Hub username and password**
 
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/6910c1cd-5436-4237-a3b5-ecf0766264bb)
 
+We select how to compile and insert the image in the container
 
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/ad5fbd7a-0522-4e26-b72d-8e5194733ade)
+
+A new publishing profile has been created
+
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/1752c2c5-d544-46e8-89f5-eeabf9559886)
 
 ## 3. Create Azure Container App
 
