@@ -117,13 +117,19 @@ We verify the project folders structure
 </div>
 ```
 
+We can verify the **index.cshtm** file in the projec folders structure
 
 ![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/6f471ab7-7bf0-44f3-a5b2-a1f611336cf0)
 
-
 ### 1.3. Add the "bin" icon
 
+We can download the icons from this URL: https://www.freepik.com/icons/bin
 
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/b0ebf5e0-9c78-4435-8e1e-82cedb8fe10c)
+
+We copy the **bin.png** icon file to the **wwwroot/icons** folder
+
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/eb997f1e-3b97-4a47-b9b6-cf8c3f6b5210)
 
 
 ### 1.4. Modify the HomeController.cs 
