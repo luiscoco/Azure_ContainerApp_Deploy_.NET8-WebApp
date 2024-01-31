@@ -35,7 +35,7 @@
 
 
 
-### 1.5 Modify the ports in Dockerfile and launchsetting.json 
+### 1.5 Modify the ports in Dockerfile and launchSetting.json 
 
 
 
