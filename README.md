@@ -277,6 +277,8 @@ http://localhost:5191/
 
 ## 2. Publish the WebApp to Docker Hub
 
+### 2.1. Publish the WebApp to Docker Hub (with commands)
+
 Be sure we already renamed the Docker image according to our Docker Hub repo name
 
 ```
@@ -290,16 +292,17 @@ docker login
 docker push luiscoco/mywebapi:latest
 ```
 
+We verify the docker image is stored in Docker Hub repo
+
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/e7a01eec-7554-4b9f-960d-3bd4966f56e0)
+
+### 2.2. Publish the WebApp to Docker Hub (with Visual Studio)
 
 
 
-### 2.1. Publish the WebApp to Docker Hub (with Visual Studio)
 
 
 
-
-
-### 2.2. Publish the WebApp to Docker Hub (with commands)
 
 
 
@@ -307,8 +310,24 @@ docker push luiscoco/mywebapi:latest
 
 ## 3. Create Azure Container App
 
+### 3.1. Create the Azure Container Application Environment
 
+```
+az containerapp env create --name myEnvironment1974 --resource-group myRG --location westeurope
+```
 
+### 3.2. Create the Azure Container Application
+
+```
+az containerapp create ^
+  --name mywebapi ^
+  --resource-group myRG ^
+  --environment myEnvironment1974 ^
+  --image luiscoco/mywebapi:latest ^
+  --target-port 8080 ^
+  --ingress external ^
+  --query configuration.ingress.fqdn
+```
 
 
 ## 4. Verify the Web App already deploy to Azure Container App
