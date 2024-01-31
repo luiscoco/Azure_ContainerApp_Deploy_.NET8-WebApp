@@ -387,11 +387,21 @@ az containerapp create ^
   --query configuration.ingress.fqdn
 ```
 
-
 ## 4. Verify the Web App already deploy to Azure Container App
 
+We log in to Azure and select All resources option 
 
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/53f31e7c-55f0-4a58-bcf0-2aa55698e23e)
 
+We navigate to the Azure Container Application service and inside the overview information we get the service endpoint
+
+https://mywebapi.redsky-85d4ab4f.westeurope.azurecontainerapps.io/
+
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/2040ce7d-df4c-4841-a0c9-00e9266d84d0)
+
+We access the running application
+
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/ac5fea85-2f97-4a5d-9343-3f898f4a2b3b)
 
 
 
