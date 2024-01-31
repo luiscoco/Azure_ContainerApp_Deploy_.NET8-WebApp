@@ -310,6 +310,18 @@ We verify the docker image is stored in Docker Hub repo
 
 ## 3. Create Azure Container App
 
+We have first to lo in to Azure CLI
+
+```
+az login
+```
+
+or 
+
+```
+az login --tenant TENANT-ID
+```
+
 ### 3.1. Create the Azure Container Application Environment
 
 ```
