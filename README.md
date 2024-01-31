@@ -1,5 +1,9 @@
 # How to deploy .NET8 WebApp to Azure Container App
 
+The source code is in github repo: https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp
+
+https://github.com/KamalRathnayake/Dapr-Todo-App
+
 ## 1. Create the .NET8 WebApp 
 
 ### 1.1. Create the .NET8 WebApp with Visual Studio 2022 Community Edition
@@ -58,8 +62,63 @@ We verify the project folders structure
 
 ### 1.2. Modify the Index.cshtml
 
+```cshtml
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .todo-item {
+        background-color: white;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        padding: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-shadow: 0px 0px 10px #e2e2e2;
+        text-align: left;
+        cursor: pointer;
+        display:flex;
+        font-size:13pt;
+    }
+
+    h1 {
+        margin-bottom: 50px;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Todos App!</h1>
+    <h5>You are viewing your app for the @ViewBag.Counter time</h5>
+
+    <div style="display: flex">
+        <div style="flex:1"></div>
+        <div style="flex:2">
+            @if (ViewBag.Todos == null || ViewBag.Todos.Count == 0)
+            {
+                <div>No Todos :(</div>
+            }
+            @foreach (var todo in ViewBag.Todos)
+            {
+                <div class="todo-item">
+                    <div style="flex:12">
+                        @todo.Name
+                    </div>
+                    <div>
+                        <img style="width:22px;flex:1" src="~/icons/bin.png" />
+                    </div>
+                </div>
+            }
+        </div>
+        <div style="flex:1"></div>
+    </div>
+    <div>
+    </div>
+</div>
+```
 
 
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/6f471ab7-7bf0-44f3-a5b2-a1f611336cf0)
 
 
 ### 1.3. Add the "bin" icon
