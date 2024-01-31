@@ -203,6 +203,19 @@ We open a Terminal Window in our soultion in Visual Studio and we create the Doc
 docker build -t mywebapi .
 ```
 
+We rename the Docker image according to our Docker Hub repo name
+
+```
+docker tag mywebapi luiscoco/mywebapi:latest
+```
+
+We log in to Docker and push the image
+
+```
+docker login
+docker push luiscoco/mywebapi:latest
+```
+
 
 
 
