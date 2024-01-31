@@ -195,6 +195,60 @@ We set in the launchSettings.json the ports 80 and 443
 
 ![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/862ea9f0-6075-4ecd-b9d2-6e2b97f97c61)
 
+**launchSettings.json**
+
+```json
+{
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5191"
+    },
+    "https": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7162;http://localhost:5191"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "environmentVariables": {
+        "ASPNETCORE_HTTPS_PORTS": "443",
+        "ASPNETCORE_HTTP_PORTS": "80"
+      },
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:14154",
+      "sslPort": 44348
+    }
+  }
+}
+```
+
 ### 1.6. Build and Run the WebApp
 
 We open a Terminal Window in our soultion in Visual Studio and we create the Docker image 
@@ -209,14 +263,18 @@ We rename the Docker image according to our Docker Hub repo name
 docker tag mywebapi luiscoco/mywebapi:latest
 ```
 
-We log in to Docker and push the image
+We log in to Docker and **push the image to Docker Hub**
 
 ```
 docker login
 docker push luiscoco/mywebapi:latest
 ```
 
+We run the docker image in Docker Desktop to verify it is working fine
 
+```
+docker run -e ASPNETCORE_ENVIRONMENT=Development -p 5191:8080 --name myapp -d mywebapi:latest
+```
 
 
 ## 2. Publish the WebApp to Docker Hub
