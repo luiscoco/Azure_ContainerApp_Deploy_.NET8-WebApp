@@ -34,7 +34,15 @@
 
 
 
-### 1.5. Build and Run the WebApp
+
+### 1.5 Modify the ports in Dockerfile and launchsetting.json 
+
+
+
+
+
+
+### 1.6. Build and Run the WebApp
 
 
 
