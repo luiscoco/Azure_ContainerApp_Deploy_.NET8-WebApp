@@ -326,6 +326,26 @@ We press the **Publish** button
 
 ![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/ebc8310a-c1ec-4905-b0e9-c0856c1f0973)
 
+We get a message confirming the docker image was published to Docker Hub
+
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/fb6cf09e-450a-4535-af81-87aa7807a58f)
+
+We verify in Docker Hub the published image
+
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/0635ff77-4448-434e-83fe-f9a31221c0f9)
+
+We can pull the image and run in local for testing purpose
+
+```
+docker pull luiscoco/azurecontainerappwebapp:latest
+```
+
+```
+docker run -e ASPNETCORE_ENVIRONMENT=Development -p 5191:8080 --name myapp -d luiscoco/azurecontainerappwebapp:latest
+```
+
+We see the image and running container in Docker Desktop
+
 
 ## 3. Create Azure Container App
 
