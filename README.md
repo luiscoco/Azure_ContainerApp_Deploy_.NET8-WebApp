@@ -197,6 +197,11 @@ We set in the launchSettings.json the ports 80 and 443
 
 ### 1.6. Build and Run the WebApp
 
+We open a Terminal Window in our soultion in Visual Studio and we create the Docker image 
+
+``` 
+docker build -t mywebapi .
+```
 
 
 
