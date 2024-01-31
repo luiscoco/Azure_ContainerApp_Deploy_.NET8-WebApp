@@ -276,6 +276,17 @@ We run the docker image in Docker Desktop to verify it is working fine
 docker run -e ASPNETCORE_ENVIRONMENT=Development -p 5191:8080 --name myapp -d mywebapi:latest
 ```
 
+We verify the docker image and running container in Docker Desktop
+
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/47e67c4b-a8d6-43b0-87b6-1ef7572ca3fd)
+
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/daa1f753-ceac-4855-8709-2d72ab05e377)
+
+We also access the application
+
+http://localhost:5191/
+
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/00f8e764-f513-43e5-9c17-b9f409fdd4e6)
 
 ## 2. Publish the WebApp to Docker Hub
 
