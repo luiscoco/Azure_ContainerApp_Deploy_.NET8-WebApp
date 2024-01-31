@@ -346,6 +346,13 @@ docker run -e ASPNETCORE_ENVIRONMENT=Development -p 5191:8080 --name myapp -d lu
 
 We see the image and running container in Docker Desktop
 
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/2747988a-2048-4481-87d6-6798373a5f5d)
+
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/f478fc82-3058-4a58-b5b1-f07ceac16198)
+
+We access the application with the endpoint: http://localhost:5191/
+
+![image](https://github.com/luiscoco/Azure_ContainerApp_Deploy_.NET8-WebApp/assets/32194879/b8542f58-c999-4e46-8fa0-50967a3dc512)
 
 ## 3. Create Azure Container App
 
