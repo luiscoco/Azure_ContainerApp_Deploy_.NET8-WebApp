@@ -257,19 +257,6 @@ We open a Terminal Window in our soultion in Visual Studio and we create the Doc
 docker build -t mywebapi .
 ```
 
-We rename the Docker image according to our Docker Hub repo name
-
-```
-docker tag mywebapi luiscoco/mywebapi:latest
-```
-
-We log in to Docker and **push the image to Docker Hub**
-
-```
-docker login
-docker push luiscoco/mywebapi:latest
-```
-
 We run the docker image in Docker Desktop to verify it is working fine
 
 ```
@@ -290,7 +277,18 @@ http://localhost:5191/
 
 ## 2. Publish the WebApp to Docker Hub
 
+Be sure we already renamed the Docker image according to our Docker Hub repo name
 
+```
+docker tag mywebapi luiscoco/mywebapi:latest
+```
+
+We log in to Docker and **push the image to Docker Hub**
+
+```
+docker login
+docker push luiscoco/mywebapi:latest
+```
 
 
 
